@@ -30,6 +30,7 @@ Partial Class Menu
         Me.AVISOSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RELATÓRIOSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AJUDAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -84,11 +85,21 @@ Partial Class Menu
         Me.AJUDAToolStripMenuItem.Size = New System.Drawing.Size(55, 20)
         Me.AJUDAToolStripMenuItem.Text = "AJUDA"
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(141, 87)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 1
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(715, 338)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Menu"
@@ -107,5 +118,6 @@ Partial Class Menu
     Friend WithEvents AVISOSToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents RELATÓRIOSToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AJUDAToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 
 End Class
