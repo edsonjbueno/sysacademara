@@ -1,6 +1,6 @@
 ﻿Public Class ClassCidade
 
-    Private Lista_De_Cidades As New List(Of ClassCidade)
+
 
     Private _Codigo_Cidade As Integer
     Public Property Coidgo_Cidade() As Integer
@@ -22,12 +22,7 @@
             _Nome = value
         End Set
     End Property
-    Private Sub PreencheCombo()
-        Dim Cidades As New ClassCidade
-        Cidades.Nome = "UBERLÂNDIA"
-        Lista_De_Cidades.Add(Cidades)
-
-    End Sub
+   
     Private _Estado As ClassEstado
     Public Property Estado() As ClassEstado
         Get
