@@ -30,7 +30,7 @@ Partial Class Menu
         Me.AVISOSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RELATÓRIOSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AJUDAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.CadastrarAlunoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -45,65 +45,74 @@ Partial Class Menu
         '
         'ALUNOToolStripMenuItem
         '
+        Me.ALUNOToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CadastrarAlunoToolStripMenuItem})
+        Me.ALUNOToolStripMenuItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ALUNOToolStripMenuItem.Name = "ALUNOToolStripMenuItem"
-        Me.ALUNOToolStripMenuItem.Size = New System.Drawing.Size(59, 20)
+        Me.ALUNOToolStripMenuItem.Size = New System.Drawing.Size(56, 20)
         Me.ALUNOToolStripMenuItem.Text = "ALUNO"
         '
         'FUNCIONÁRIOToolStripMenuItem
         '
+        Me.FUNCIONÁRIOToolStripMenuItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FUNCIONÁRIOToolStripMenuItem.Name = "FUNCIONÁRIOToolStripMenuItem"
-        Me.FUNCIONÁRIOToolStripMenuItem.Size = New System.Drawing.Size(98, 20)
+        Me.FUNCIONÁRIOToolStripMenuItem.Size = New System.Drawing.Size(93, 20)
         Me.FUNCIONÁRIOToolStripMenuItem.Text = "FUNCIONÁRIO"
         '
         'MENSALIDADESToolStripMenuItem
         '
+        Me.MENSALIDADESToolStripMenuItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MENSALIDADESToolStripMenuItem.Name = "MENSALIDADESToolStripMenuItem"
-        Me.MENSALIDADESToolStripMenuItem.Size = New System.Drawing.Size(104, 20)
+        Me.MENSALIDADESToolStripMenuItem.Size = New System.Drawing.Size(103, 20)
         Me.MENSALIDADESToolStripMenuItem.Text = "MENSALIDADES"
         '
         'FINANCEIROToolStripMenuItem
         '
+        Me.FINANCEIROToolStripMenuItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FINANCEIROToolStripMenuItem.Name = "FINANCEIROToolStripMenuItem"
-        Me.FINANCEIROToolStripMenuItem.Size = New System.Drawing.Size(87, 20)
+        Me.FINANCEIROToolStripMenuItem.Size = New System.Drawing.Size(84, 20)
         Me.FINANCEIROToolStripMenuItem.Text = "FINANCEIRO"
         '
         'AVISOSToolStripMenuItem
         '
+        Me.AVISOSToolStripMenuItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AVISOSToolStripMenuItem.Name = "AVISOSToolStripMenuItem"
         Me.AVISOSToolStripMenuItem.Size = New System.Drawing.Size(58, 20)
         Me.AVISOSToolStripMenuItem.Text = "AVISOS"
         '
         'RELATÓRIOSToolStripMenuItem
         '
+        Me.RELATÓRIOSToolStripMenuItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RELATÓRIOSToolStripMenuItem.Name = "RELATÓRIOSToolStripMenuItem"
-        Me.RELATÓRIOSToolStripMenuItem.Size = New System.Drawing.Size(87, 20)
+        Me.RELATÓRIOSToolStripMenuItem.Size = New System.Drawing.Size(88, 20)
         Me.RELATÓRIOSToolStripMenuItem.Text = "RELATÓRIOS"
         '
         'AJUDAToolStripMenuItem
         '
+        Me.AJUDAToolStripMenuItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AJUDAToolStripMenuItem.Name = "AJUDAToolStripMenuItem"
-        Me.AJUDAToolStripMenuItem.Size = New System.Drawing.Size(55, 20)
+        Me.AJUDAToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
         Me.AJUDAToolStripMenuItem.Text = "AJUDA"
         '
-        'Button1
+        'CadastrarAlunoToolStripMenuItem
         '
-        Me.Button1.Location = New System.Drawing.Point(141, 87)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.CadastrarAlunoToolStripMenuItem.Name = "CadastrarAlunoToolStripMenuItem"
+        Me.CadastrarAlunoToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CadastrarAlunoToolStripMenuItem.Text = "Cadastrar Aluno"
         '
         'Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.Gray
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(715, 338)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Menu"
+        Me.ShowIcon = False
         Me.Text = "Menu"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
@@ -118,6 +127,6 @@ Partial Class Menu
     Friend WithEvents AVISOSToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents RELATÓRIOSToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AJUDAToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents CadastrarAlunoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

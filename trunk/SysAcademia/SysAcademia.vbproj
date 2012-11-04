@@ -87,11 +87,26 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FabricadeConexao.vb" />
-    <Compile Include="Menu.vb">
+    <Compile Include="Classes\ClassAluno.vb" />
+    <Compile Include="Classes\ClassCidade.vb" />
+    <Compile Include="Classes\ClassEndereco.vb" />
+    <Compile Include="Classes\ClassEstado.vb" />
+    <Compile Include="Classes\ClassMensalidade.vb" />
+    <Compile Include="ClassFabricaConexao\FabricadeConexao.vb" />
+    <Compile Include="Classes\ClassSituacaoAluno.vb" />
+    <Compile Include="Classes\ClassTelefone.vb" />
+    <Compile Include="Classes\ClassTipoTelefone.vb" />
+    <Compile Include="DAOs\DAO_Aluno.vb" />
+    <Compile Include="Forms\CadastroAluno.Designer.vb">
+      <DependentUpon>CadastroAluno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CadastroAluno.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu.Designer.vb">
+    <Compile Include="Forms\Menu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menu.Designer.vb">
       <DependentUpon>Menu.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
@@ -112,7 +127,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Menu.resx">
+    <EmbeddedResource Include="Forms\CadastroAluno.resx">
+      <DependentUpon>CadastroAluno.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menu.resx">
       <DependentUpon>Menu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -134,9 +152,7 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Util\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="bd_sysacademia.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
