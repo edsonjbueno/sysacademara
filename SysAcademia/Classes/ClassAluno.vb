@@ -83,6 +83,17 @@
         End Set
     End Property
 
+    Private _Lista_Cidades As New List(Of ClassCidade)
+    Public Property Lista_Cidades() As List(Of ClassCidade)
+        Get
+            Return _Lista_Cidades
+        End Get
+        Set(ByVal value As List(Of ClassCidade))
+            _Lista_Cidades = value
+        End Set
+    End Property
+
+
     Public Overrides Function ToString() As String
         Return "Matric.Aluno " & Matricula_Aluno & " Nome " & Nome & " Data.Nasc " & Data_Nasc & " Sexo " & Sexo &
             " Mensalidade " & Mensalidade.ToString & " Situação " & Situacao_Aluno.ToString & " Telefone " & Telefone.ToString &
