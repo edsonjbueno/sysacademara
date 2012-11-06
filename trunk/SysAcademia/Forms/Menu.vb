@@ -8,4 +8,7 @@ Public Class Menu
     End Sub
 
     
+    Private Sub CADASTRARFUNCIONARIOToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CADASTRARFUNCIONARIOToolStripMenuItem.Click
+        CadastroFuncionario.Show()
+    End Sub
 End Class
