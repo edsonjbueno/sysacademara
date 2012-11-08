@@ -34,7 +34,7 @@
     End Property
 
     Public Overrides Function ToString() As String
-        Return Coidgo_Cidade & "Nome Cidade " & Nome & " Estado " & Estado.ToString
+        Return Coidgo_Cidade & "Nome Cidade " & Nome
     End Function
 
 
