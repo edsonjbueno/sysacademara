@@ -5,7 +5,7 @@ Public Class CadastroAluno
     Dim List As New List(Of ClassCidade)
 
     Private Function Dados_Aluno() As ClassAluno
-
+        '
         Dim ObjAluno As New ClassAluno
 
         ObjAluno.Nome = TxtNome.Text
