@@ -30,6 +30,7 @@ Public Class CadastroFuncionario
         ObjFuncionario.Matricula_Funcionario = TxtMatricula.Text
         ObjFuncionario.Nome = TxtNome.Text
 
+
         Return ObjFuncionario
 
     End Function

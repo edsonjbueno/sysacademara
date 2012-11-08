@@ -80,7 +80,7 @@ Partial Class CadastroFuncionario
         Me.GroupBox1.Controls.Add(Me.TxtRua)
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.TxtEndereço)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 323)
+        Me.GroupBox1.Location = New System.Drawing.Point(13, 459)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(560, 227)
         Me.GroupBox1.TabIndex = 38
@@ -240,7 +240,7 @@ Partial Class CadastroFuncionario
         Me.GroupBox2.Controls.Add(Me.TxtMatricula)
         Me.GroupBox2.Location = New System.Drawing.Point(13, 16)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(559, 301)
+        Me.GroupBox2.Size = New System.Drawing.Size(559, 421)
         Me.GroupBox2.TabIndex = 39
         Me.GroupBox2.TabStop = False
         '
@@ -398,7 +398,7 @@ Partial Class CadastroFuncionario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(714, 562)
+        Me.ClientSize = New System.Drawing.Size(714, 698)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "CadastroFuncionario"
