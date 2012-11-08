@@ -98,6 +98,8 @@
     <Compile Include="Classes\ClassTelefone.vb" />
     <Compile Include="Classes\ClassTipoTelefone.vb" />
     <Compile Include="DAOs\DAO_Aluno.vb" />
+    <Compile Include="DAOs\DAO_Cidade.vb" />
+    <Compile Include="DAOs\DAO_Estado.vb" />
     <Compile Include="DAOs\DAO_Funcionario.vb" />
     <Compile Include="Forms\CadastroAluno.Designer.vb">
       <DependentUpon>CadastroAluno.vb</DependentUpon>
@@ -109,6 +111,12 @@
       <DependentUpon>CadastroFuncionario.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\CadastroFuncionario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro_Nova_Cidade.Designer.vb">
+      <DependentUpon>Cadastro_Nova_Cidade.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro_Nova_Cidade.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Menu.vb">
@@ -141,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CadastroFuncionario.resx">
       <DependentUpon>CadastroFuncionario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro_Nova_Cidade.resx">
+      <DependentUpon>Cadastro_Nova_Cidade.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Menu.resx">
       <DependentUpon>Menu.vb</DependentUpon>

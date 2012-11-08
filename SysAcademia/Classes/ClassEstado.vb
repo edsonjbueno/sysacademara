@@ -2,6 +2,13 @@
 
 
 
+    Private _ListaCidade As New List(Of ClassCidade)
+    Public ReadOnly Property ListaCidade() As List(Of ClassCidade)
+        Get
+            Return _ListaCidade
+        End Get
+      
+    End Property
 
     Private _Codigo_Estado As Integer
     Public Property Codigo_Estado() As Integer
@@ -23,6 +30,10 @@
             _Nome = value
         End Set
     End Property
+
+
+
+
     Public Overrides Function ToString() As String
         Return Codigo_Estado & " Nome Estado " & Nome
     End Function
