@@ -22,7 +22,7 @@
         End Set
     End Property
 
-    Private _Data_Nasc As Date
+    Private _Data_Nasc As Date?
     Public Property Data_Nasc() As Date
         Get
             Return _Data_Nasc
@@ -83,21 +83,23 @@
         End Set
     End Property
 
-    Private _Lista_Cidades As New List(Of ClassCidade)
-    Public Property Lista_Cidades() As List(Of ClassCidade)
+
+    Private _Codigo_Cidade As ClassCidade
+    Public Property Codigo_Cidade() As ClassCidade
         Get
-            Return _Lista_Cidades
+            Return _Codigo_Cidade
         End Get
-        Set(ByVal value As List(Of ClassCidade))
-            _Lista_Cidades = value
+        Set(ByVal value As ClassCidade)
+            _Codigo_Cidade = value
         End Set
     End Property
 
 
-    Public Overrides Function ToString() As String
-        Return "Matric.Aluno " & Matricula_Aluno & " Nome " & Nome & " Data.Nasc " & Data_Nasc & " Sexo " & Sexo &
-            " Mensalidade " & Mensalidade.ToString & " Situação " & Situacao_Aluno.ToString & " Telefone " & Telefone.ToString &
-            " Endereço " & Endereco.ToString
-    End Function
+
+    'Public Overrides Function ToString() As String
+    '    Return "Matric.Aluno " & Matricula_Aluno & " Nome " & Nome & " Data.Nasc " & Data_Nasc & " Sexo " & Sexo &
+    '        " Mensalidade " & Mensalidade.ToString & " Situação " & Situacao_Aluno.ToString & " Telefone " & Telefone.ToString &
+    '        " Endereço " & Endereco.ToString
+    'End Function
 
 End Class

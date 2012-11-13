@@ -93,14 +93,17 @@
     <Compile Include="Classes\ClassEstado.vb" />
     <Compile Include="Classes\ClassFuncionario.vb" />
     <Compile Include="Classes\ClassMensalidade.vb" />
+    <Compile Include="Classes\ClassTipo_De_Mensalidade.vb" />
     <Compile Include="ClassFabricaConexao\FabricadeConexao.vb" />
     <Compile Include="Classes\ClassSituacaoAluno.vb" />
     <Compile Include="Classes\ClassTelefone.vb" />
     <Compile Include="Classes\ClassTipoTelefone.vb" />
     <Compile Include="DAOs\DAO_Aluno.vb" />
     <Compile Include="DAOs\DAO_Cidade.vb" />
+    <Compile Include="DAOs\DAO_Endereco.vb" />
     <Compile Include="DAOs\DAO_Estado.vb" />
     <Compile Include="DAOs\DAO_Funcionario.vb" />
+    <Compile Include="DAOs\DAO_Tipo_De_Mensalidade.vb" />
     <Compile Include="Forms\CadastroAluno.Designer.vb">
       <DependentUpon>CadastroAluno.vb</DependentUpon>
     </Compile>
@@ -117,6 +120,12 @@
       <DependentUpon>Cadastro_Nova_Cidade.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\Cadastro_Nova_Cidade.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro_Tipo_Mensalidade.Designer.vb">
+      <DependentUpon>Cadastro_Tipo_Mensalidade.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro_Tipo_Mensalidade.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Menu.vb">
@@ -153,6 +162,9 @@
     <EmbeddedResource Include="Forms\Cadastro_Nova_Cidade.resx">
       <DependentUpon>Cadastro_Nova_Cidade.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro_Tipo_Mensalidade.resx">
+      <DependentUpon>Cadastro_Tipo_Mensalidade.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Menu.resx">
       <DependentUpon>Menu.vb</DependentUpon>
     </EmbeddedResource>
@@ -164,7 +176,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -177,11 +191,8 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="bd_sysacademia.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="bd_sysacademia.mdf" />
     <Content Include="bd_sysacademia_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>bd_sysacademia.mdf</DependentUpon>
     </Content>
   </ItemGroup>

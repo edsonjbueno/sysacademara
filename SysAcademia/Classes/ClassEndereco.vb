@@ -51,24 +51,13 @@
         End Set
     End Property
 
-    Private _Cidade As ClassCidade
-    Public Property Cidade() As ClassCidade
+    Private _Busca_Cidade_Estado As ClassCidade
+    Public Property Busca_Cidade_Estado() As ClassCidade
         Get
-            Return _Cidade
+            Return _Busca_Cidade_Estado
         End Get
         Set(ByVal value As ClassCidade)
-            _Cidade = value
+            _Busca_Cidade_Estado = value
         End Set
     End Property
-    Public Overrides Function ToString() As String
-        Return Codigo_Endereco & " Rua " & Rua & " Nº " & Numero & " Complemento " & Complemento &
-            " Bairro " & Bairro & " Cidade " & Cidade.ToString
-    End Function
-
-
-
-
-
-
-
 End Class

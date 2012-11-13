@@ -62,6 +62,7 @@ Partial Class CadastroAluno
         Me.Label16 = New System.Windows.Forms.Label()
         Me.MaskPagamento = New System.Windows.Forms.MaskedTextBox()
         Me.BtnCad_Nov_Cid = New System.Windows.Forms.Button()
+        Me.BtnD_C_T_Mensalidade = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -91,7 +92,7 @@ Partial Class CadastroAluno
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(259, 242)
+        Me.Label15.Location = New System.Drawing.Point(240, 299)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(34, 13)
         Me.Label15.TabIndex = 53
@@ -99,7 +100,7 @@ Partial Class CadastroAluno
         '
         'TxtValor
         '
-        Me.TxtValor.Location = New System.Drawing.Point(299, 239)
+        Me.TxtValor.Location = New System.Drawing.Point(280, 296)
         Me.TxtValor.Name = "TxtValor"
         Me.TxtValor.Size = New System.Drawing.Size(71, 20)
         Me.TxtValor.TabIndex = 52
@@ -107,7 +108,7 @@ Partial Class CadastroAluno
         'ComboTipoTelefone
         '
         Me.ComboTipoTelefone.FormattingEnabled = True
-        Me.ComboTipoTelefone.Location = New System.Drawing.Point(329, 310)
+        Me.ComboTipoTelefone.Location = New System.Drawing.Point(325, 257)
         Me.ComboTipoTelefone.Name = "ComboTipoTelefone"
         Me.ComboTipoTelefone.Size = New System.Drawing.Size(121, 21)
         Me.ComboTipoTelefone.TabIndex = 51
@@ -115,7 +116,7 @@ Partial Class CadastroAluno
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(232, 313)
+        Me.Label14.Location = New System.Drawing.Point(228, 260)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(91, 13)
         Me.Label14.TabIndex = 50
@@ -123,7 +124,7 @@ Partial Class CadastroAluno
         '
         'MaskTelefone
         '
-        Me.MaskTelefone.Location = New System.Drawing.Point(107, 310)
+        Me.MaskTelefone.Location = New System.Drawing.Point(104, 258)
         Me.MaskTelefone.Mask = "(99)0000-0000"
         Me.MaskTelefone.Name = "MaskTelefone"
         Me.MaskTelefone.Size = New System.Drawing.Size(100, 20)
@@ -132,7 +133,7 @@ Partial Class CadastroAluno
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(32, 313)
+        Me.Label13.Location = New System.Drawing.Point(28, 260)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(52, 13)
         Me.Label13.TabIndex = 48
@@ -141,7 +142,7 @@ Partial Class CadastroAluno
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(32, 275)
+        Me.Label6.Location = New System.Drawing.Point(28, 225)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(52, 13)
         Me.Label6.TabIndex = 47
@@ -150,7 +151,7 @@ Partial Class CadastroAluno
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(32, 239)
+        Me.Label5.Location = New System.Drawing.Point(18, 299)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(70, 13)
         Me.Label5.TabIndex = 46
@@ -159,7 +160,7 @@ Partial Class CadastroAluno
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(32, 198)
+        Me.Label4.Location = New System.Drawing.Point(28, 189)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(34, 13)
         Me.Label4.TabIndex = 45
@@ -195,7 +196,7 @@ Partial Class CadastroAluno
         'ComboSituação
         '
         Me.ComboSituação.FormattingEnabled = True
-        Me.ComboSituação.Location = New System.Drawing.Point(107, 272)
+        Me.ComboSituação.Location = New System.Drawing.Point(103, 222)
         Me.ComboSituação.Name = "ComboSituação"
         Me.ComboSituação.Size = New System.Drawing.Size(121, 21)
         Me.ComboSituação.TabIndex = 41
@@ -203,7 +204,7 @@ Partial Class CadastroAluno
         'ComboMensalidade
         '
         Me.ComboMensalidade.FormattingEnabled = True
-        Me.ComboMensalidade.Location = New System.Drawing.Point(107, 236)
+        Me.ComboMensalidade.Location = New System.Drawing.Point(93, 296)
         Me.ComboMensalidade.Name = "ComboMensalidade"
         Me.ComboMensalidade.Size = New System.Drawing.Size(121, 21)
         Me.ComboMensalidade.TabIndex = 40
@@ -211,7 +212,7 @@ Partial Class CadastroAluno
         'ComboSexo
         '
         Me.ComboSexo.FormattingEnabled = True
-        Me.ComboSexo.Location = New System.Drawing.Point(107, 195)
+        Me.ComboSexo.Location = New System.Drawing.Point(103, 186)
         Me.ComboSexo.Name = "ComboSexo"
         Me.ComboSexo.Size = New System.Drawing.Size(121, 21)
         Me.ComboSexo.TabIndex = 39
@@ -241,7 +242,7 @@ Partial Class CadastroAluno
         '
         'BtnCancelar
         '
-        Me.BtnCancelar.Location = New System.Drawing.Point(302, 512)
+        Me.BtnCancelar.Location = New System.Drawing.Point(309, 551)
         Me.BtnCancelar.Name = "BtnCancelar"
         Me.BtnCancelar.Size = New System.Drawing.Size(193, 28)
         Me.BtnCancelar.TabIndex = 69
@@ -250,7 +251,7 @@ Partial Class CadastroAluno
         '
         'BtnSalvar
         '
-        Me.BtnSalvar.Location = New System.Drawing.Point(103, 512)
+        Me.BtnSalvar.Location = New System.Drawing.Point(110, 551)
         Me.BtnSalvar.Name = "BtnSalvar"
         Me.BtnSalvar.Size = New System.Drawing.Size(193, 28)
         Me.BtnSalvar.TabIndex = 68
@@ -260,7 +261,7 @@ Partial Class CadastroAluno
         'ComboEstado
         '
         Me.ComboEstado.FormattingEnabled = True
-        Me.ComboEstado.Location = New System.Drawing.Point(103, 462)
+        Me.ComboEstado.Location = New System.Drawing.Point(110, 479)
         Me.ComboEstado.Name = "ComboEstado"
         Me.ComboEstado.Size = New System.Drawing.Size(177, 21)
         Me.ComboEstado.TabIndex = 67
@@ -268,7 +269,7 @@ Partial Class CadastroAluno
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(32, 465)
+        Me.Label12.Location = New System.Drawing.Point(39, 487)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(43, 13)
         Me.Label12.TabIndex = 66
@@ -277,7 +278,7 @@ Partial Class CadastroAluno
         'ComboCidade
         '
         Me.ComboCidade.FormattingEnabled = True
-        Me.ComboCidade.Location = New System.Drawing.Point(103, 435)
+        Me.ComboCidade.Location = New System.Drawing.Point(110, 506)
         Me.ComboCidade.Name = "ComboCidade"
         Me.ComboCidade.Size = New System.Drawing.Size(177, 21)
         Me.ComboCidade.TabIndex = 65
@@ -285,7 +286,7 @@ Partial Class CadastroAluno
         'Cidade
         '
         Me.Cidade.AutoSize = True
-        Me.Cidade.Location = New System.Drawing.Point(32, 435)
+        Me.Cidade.Location = New System.Drawing.Point(39, 514)
         Me.Cidade.Name = "Cidade"
         Me.Cidade.Size = New System.Drawing.Size(43, 13)
         Me.Cidade.TabIndex = 64
@@ -294,7 +295,7 @@ Partial Class CadastroAluno
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(271, 412)
+        Me.Label11.Location = New System.Drawing.Point(278, 451)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(74, 13)
         Me.Label11.TabIndex = 63
@@ -302,7 +303,7 @@ Partial Class CadastroAluno
         '
         'TxtComplemento
         '
-        Me.TxtComplemento.Location = New System.Drawing.Point(351, 409)
+        Me.TxtComplemento.Location = New System.Drawing.Point(358, 448)
         Me.TxtComplemento.Name = "TxtComplemento"
         Me.TxtComplemento.Size = New System.Drawing.Size(118, 20)
         Me.TxtComplemento.TabIndex = 62
@@ -310,7 +311,7 @@ Partial Class CadastroAluno
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(32, 409)
+        Me.Label10.Location = New System.Drawing.Point(39, 448)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(37, 13)
         Me.Label10.TabIndex = 61
@@ -318,7 +319,7 @@ Partial Class CadastroAluno
         '
         'TxtBairro
         '
-        Me.TxtBairro.Location = New System.Drawing.Point(107, 409)
+        Me.TxtBairro.Location = New System.Drawing.Point(114, 448)
         Me.TxtBairro.Name = "TxtBairro"
         Me.TxtBairro.Size = New System.Drawing.Size(154, 20)
         Me.TxtBairro.TabIndex = 60
@@ -326,7 +327,7 @@ Partial Class CadastroAluno
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(432, 386)
+        Me.Label9.Location = New System.Drawing.Point(439, 425)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(25, 13)
         Me.Label9.TabIndex = 59
@@ -334,7 +335,7 @@ Partial Class CadastroAluno
         '
         'TxtNº
         '
-        Me.TxtNº.Location = New System.Drawing.Point(475, 380)
+        Me.TxtNº.Location = New System.Drawing.Point(482, 419)
         Me.TxtNº.Name = "TxtNº"
         Me.TxtNº.Size = New System.Drawing.Size(71, 20)
         Me.TxtNº.TabIndex = 58
@@ -342,7 +343,7 @@ Partial Class CadastroAluno
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(32, 383)
+        Me.Label8.Location = New System.Drawing.Point(39, 422)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(54, 13)
         Me.Label8.TabIndex = 57
@@ -350,7 +351,7 @@ Partial Class CadastroAluno
         '
         'TxtRua
         '
-        Me.TxtRua.Location = New System.Drawing.Point(107, 383)
+        Me.TxtRua.Location = New System.Drawing.Point(114, 422)
         Me.TxtRua.Name = "TxtRua"
         Me.TxtRua.Size = New System.Drawing.Size(307, 20)
         Me.TxtRua.TabIndex = 56
@@ -358,7 +359,7 @@ Partial Class CadastroAluno
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(32, 353)
+        Me.Label7.Location = New System.Drawing.Point(39, 392)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(56, 13)
         Me.Label7.TabIndex = 55
@@ -366,7 +367,7 @@ Partial Class CadastroAluno
         '
         'TxtEndereço
         '
-        Me.TxtEndereço.Location = New System.Drawing.Point(107, 350)
+        Me.TxtEndereço.Location = New System.Drawing.Point(114, 389)
         Me.TxtEndereço.Name = "TxtEndereço"
         Me.TxtEndereço.Size = New System.Drawing.Size(374, 20)
         Me.TxtEndereço.TabIndex = 54
@@ -374,7 +375,7 @@ Partial Class CadastroAluno
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(399, 242)
+        Me.Label16.Location = New System.Drawing.Point(369, 300)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(90, 13)
         Me.Label16.TabIndex = 70
@@ -382,7 +383,7 @@ Partial Class CadastroAluno
         '
         'MaskPagamento
         '
-        Me.MaskPagamento.Location = New System.Drawing.Point(495, 239)
+        Me.MaskPagamento.Location = New System.Drawing.Point(465, 297)
         Me.MaskPagamento.Mask = "00/00/0000"
         Me.MaskPagamento.Name = "MaskPagamento"
         Me.MaskPagamento.Size = New System.Drawing.Size(100, 20)
@@ -391,12 +392,21 @@ Partial Class CadastroAluno
         '
         'BtnCad_Nov_Cid
         '
-        Me.BtnCad_Nov_Cid.Location = New System.Drawing.Point(297, 438)
+        Me.BtnCad_Nov_Cid.Location = New System.Drawing.Point(304, 477)
         Me.BtnCad_Nov_Cid.Name = "BtnCad_Nov_Cid"
         Me.BtnCad_Nov_Cid.Size = New System.Drawing.Size(172, 23)
         Me.BtnCad_Nov_Cid.TabIndex = 72
-        Me.BtnCad_Nov_Cid.Text = "Cadastrar Nova Cidade"
+        Me.BtnCad_Nov_Cid.Text = "Cadastrar Nova Cidade ?"
         Me.BtnCad_Nov_Cid.UseVisualStyleBackColor = True
+        '
+        'BtnD_C_T_Mensalidade
+        '
+        Me.BtnD_C_T_Mensalidade.Location = New System.Drawing.Point(26, 323)
+        Me.BtnD_C_T_Mensalidade.Name = "BtnD_C_T_Mensalidade"
+        Me.BtnD_C_T_Mensalidade.Size = New System.Drawing.Size(552, 23)
+        Me.BtnD_C_T_Mensalidade.TabIndex = 73
+        Me.BtnD_C_T_Mensalidade.Text = "Deseja Cadastrar Outro Tipo de Mensalidade ?"
+        Me.BtnD_C_T_Mensalidade.UseVisualStyleBackColor = True
         '
         'CadastroAluno
         '
@@ -405,6 +415,7 @@ Partial Class CadastroAluno
         Me.BackColor = System.Drawing.Color.Silver
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(784, 633)
+        Me.Controls.Add(Me.BtnD_C_T_Mensalidade)
         Me.Controls.Add(Me.BtnCad_Nov_Cid)
         Me.Controls.Add(Me.MaskPagamento)
         Me.Controls.Add(Me.Label16)
@@ -495,4 +506,5 @@ Partial Class CadastroAluno
     Friend WithEvents Label16 As System.Windows.Forms.Label
     Friend WithEvents MaskPagamento As System.Windows.Forms.MaskedTextBox
     Friend WithEvents BtnCad_Nov_Cid As System.Windows.Forms.Button
+    Friend WithEvents BtnD_C_T_Mensalidade As System.Windows.Forms.Button
 End Class
