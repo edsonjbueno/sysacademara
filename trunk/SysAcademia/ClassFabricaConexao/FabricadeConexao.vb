@@ -20,10 +20,11 @@ Public Class FabricadeConexao
 
             End If
         Catch ex As Exception
-
+            Console.WriteLine("Erro: " & ex.Message)
         End Try
     End Sub
 
+    
 End Class
 
 

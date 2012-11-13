@@ -31,8 +31,4 @@
         End Set
     End Property
 
-    Public Overrides Function ToString() As String
-        Return Codigo_Mensalidade & " Data Pagamento " & Data_Pagamento & " Valor " & Valor
-    End Function
-
 End Class

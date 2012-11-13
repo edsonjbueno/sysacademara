@@ -1,9 +1,9 @@
 ﻿Public Class ClassCidade
 
-
+    ' Classe esta pronta e funcionando, "FAVOR NÃO AUTERAR SEM FALAR COMIGO" Ederson..
 
     Private _Codigo_Cidade As Integer
-    Public Property Coidgo_Cidade() As Integer
+    Public Property Codigo_Cidade() As Integer
         Get
             Return _Codigo_Cidade
         End Get
@@ -19,11 +19,15 @@
             Return _Nome
         End Get
         Set(ByVal value As String)
+            If value.Trim() = "" Then
+                Throw New Exception("Valor inválido para parâmetro nome!")
+            End If
             _Nome = value
+
         End Set
     End Property
    
-    Private _Estado As ClassEstado
+    Private _Estado As New ClassEstado
     Public Property Estado() As ClassEstado
         Get
             Return _Estado
@@ -32,11 +36,5 @@
             _Estado = value
         End Set
     End Property
-
-    Public Overrides Function ToString() As String
-        Return Coidgo_Cidade & "Nome Cidade " & Nome
-    End Function
-
-
 
 End Class
