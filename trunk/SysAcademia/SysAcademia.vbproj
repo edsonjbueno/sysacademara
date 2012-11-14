@@ -93,6 +93,9 @@
     <Compile Include="Classes\ClassEstado.vb" />
     <Compile Include="Classes\ClassFuncionario.vb" />
     <Compile Include="Classes\ClassMensalidade.vb" />
+    <Compile Include="Classes\ClassSexo.vb" />
+    <Compile Include="Classes\ClassSituacaoFuncionario.vb" />
+    <Compile Include="Classes\ClassTipoFunc.vb" />
     <Compile Include="Classes\ClassTipo_De_Mensalidade.vb" />
     <Compile Include="ClassFabricaConexao\FabricadeConexao.vb" />
     <Compile Include="Classes\ClassSituacaoAluno.vb" />
@@ -103,6 +106,8 @@
     <Compile Include="DAOs\DAO_Endereco.vb" />
     <Compile Include="DAOs\DAO_Estado.vb" />
     <Compile Include="DAOs\DAO_Funcionario.vb" />
+    <Compile Include="DAOs\DAO_SituacaoFuncionario.vb" />
+    <Compile Include="DAOs\DAO_TipoFunc.vb" />
     <Compile Include="DAOs\DAO_Tipo_De_Mensalidade.vb" />
     <Compile Include="Forms\CadastroAluno.Designer.vb">
       <DependentUpon>CadastroAluno.vb</DependentUpon>
@@ -114,6 +119,12 @@
       <DependentUpon>CadastroFuncionario.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\CadastroFuncionario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CadTipFunc.Designer.vb">
+      <DependentUpon>CadTipFunc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CadTipFunc.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Cadastro_Nova_Cidade.Designer.vb">
@@ -158,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CadastroFuncionario.resx">
       <DependentUpon>CadastroFuncionario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CadTipFunc.resx">
+      <DependentUpon>CadTipFunc.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Cadastro_Nova_Cidade.resx">
       <DependentUpon>Cadastro_Nova_Cidade.vb</DependentUpon>

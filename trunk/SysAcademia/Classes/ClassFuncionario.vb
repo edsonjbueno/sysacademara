@@ -1,6 +1,15 @@
 ﻿Public Class ClassFuncionario
 
 
+    Private _Telefone As ClassTelefone
+    Public Property Telefone() As ClassTelefone
+        Get
+            Return _Telefone
+        End Get
+        Set(ByVal value As ClassTelefone)
+            _Telefone = value
+        End Set
+    End Property
 
     Private _Matricula_Funcionario As Integer
     Public Property Matricula_Funcionario() As Integer
@@ -45,27 +54,27 @@
     End Property
 
 
-    Private _Cpf As Integer?
-    Public Property Cpf() As Integer?
+
+    Private _Cpf As String
+    Public Property Cpf() As String
         Get
             Return _Cpf
         End Get
-        Set(ByVal value As Integer?)
+        Set(ByVal value As String)
             _Cpf = value
         End Set
     End Property
 
 
-    Private _Rg As Integer?
-    Public Property Rg() As Integer?
+    Private _Rg As String
+    Public Property Rg() As String
         Get
             Return _Rg
         End Get
-        Set(ByVal value As Integer?)
+        Set(ByVal value As String)
             _Rg = value
         End Set
     End Property
-
 
     Private _Salario As Double?
     Public Property Salario() As Double?
@@ -77,5 +86,51 @@
         End Set
     End Property
 
- 
+
+    Private _SituacaoFuncionario As New ClassSituacaoFuncionario
+    Public Property SituacaoFuncionario() As ClassSituacaoFuncionario
+        Get
+            Return _SituacaoFuncionario
+        End Get
+        Set(ByVal value As ClassSituacaoFuncionario)
+            _SituacaoFuncionario = value
+        End Set
+    End Property
+
+    Private _Codigo_Endereco As New ClassEndereco
+    Public Property Codigo_Endereco() As ClassEndereco
+        Get
+            Return _Codigo_Endereco
+        End Get
+        Set(ByVal value As ClassEndereco)
+            _Codigo_Endereco = value
+        End Set
+    End Property
+
+
+    Private _Codigo_Cidade As New ClassCidade
+    Public Property Codigo_Cidade() As ClassCidade
+        Get
+            Return _Codigo_Cidade
+        End Get
+        Set(ByVal value As ClassCidade)
+            _Codigo_Cidade = value
+        End Set
+    End Property
+
+
+
+    Private _Codigo_TipoFuncionario As New ClassTipoFunc
+    Public Property Codigo_TipoFuncionario() As ClassTipoFunc
+        Get
+            Return _Codigo_TipoFuncionario
+        End Get
+        Set(ByVal value As ClassTipoFunc)
+            _Codigo_TipoFuncionario = value
+        End Set
+    End Property
+
+
+
+
 End Class

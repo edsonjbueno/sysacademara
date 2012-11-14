@@ -23,6 +23,7 @@ Partial Class CadastroFuncionario
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.BtnCad_Nov_Cid = New System.Windows.Forms.Button()
         Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.BtnSalvar = New System.Windows.Forms.Button()
         Me.ComboEstado = New System.Windows.Forms.ComboBox()
@@ -40,20 +41,25 @@ Partial Class CadastroFuncionario
         Me.Label7 = New System.Windows.Forms.Label()
         Me.TxtEndereço = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.txtRg = New System.Windows.Forms.TextBox()
-        Me.txtCpf = New System.Windows.Forms.TextBox()
+        Me.MaskRG = New System.Windows.Forms.MaskedTextBox()
+        Me.MaskCPF = New System.Windows.Forms.MaskedTextBox()
+        Me.ComboTipoFunc = New System.Windows.Forms.ComboBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.txtSalario = New System.Windows.Forms.TextBox()
+        Me.Label16 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.ComboTipoTelefone = New System.Windows.Forms.ComboBox()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
+        Me.MaskTelefone = New System.Windows.Forms.MaskedTextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ComboSituação = New System.Windows.Forms.ComboBox()
+        Me.ComboSituacao = New System.Windows.Forms.ComboBox()
         Me.ComboSexo = New System.Windows.Forms.ComboBox()
         Me.MaskDataNasc = New System.Windows.Forms.MaskedTextBox()
         Me.TxtNome = New System.Windows.Forms.TextBox()
@@ -64,6 +70,7 @@ Partial Class CadastroFuncionario
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.BtnCad_Nov_Cid)
         Me.GroupBox1.Controls.Add(Me.BtnCancelar)
         Me.GroupBox1.Controls.Add(Me.BtnSalvar)
         Me.GroupBox1.Controls.Add(Me.ComboEstado)
@@ -80,11 +87,20 @@ Partial Class CadastroFuncionario
         Me.GroupBox1.Controls.Add(Me.TxtRua)
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.TxtEndereço)
-        Me.GroupBox1.Location = New System.Drawing.Point(13, 459)
+        Me.GroupBox1.Location = New System.Drawing.Point(13, 443)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(560, 227)
         Me.GroupBox1.TabIndex = 38
         Me.GroupBox1.TabStop = False
+        '
+        'BtnCad_Nov_Cid
+        '
+        Me.BtnCad_Nov_Cid.Location = New System.Drawing.Point(245, 99)
+        Me.BtnCad_Nov_Cid.Name = "BtnCad_Nov_Cid"
+        Me.BtnCad_Nov_Cid.Size = New System.Drawing.Size(172, 23)
+        Me.BtnCad_Nov_Cid.TabIndex = 73
+        Me.BtnCad_Nov_Cid.Text = "Cadastrar Nova Cidade ?"
+        Me.BtnCad_Nov_Cid.UseVisualStyleBackColor = True
         '
         'BtnCancelar
         '
@@ -220,20 +236,25 @@ Partial Class CadastroFuncionario
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.txtRg)
-        Me.GroupBox2.Controls.Add(Me.txtCpf)
+        Me.GroupBox2.Controls.Add(Me.MaskRG)
+        Me.GroupBox2.Controls.Add(Me.MaskCPF)
+        Me.GroupBox2.Controls.Add(Me.ComboTipoFunc)
+        Me.GroupBox2.Controls.Add(Me.Button1)
+        Me.GroupBox2.Controls.Add(Me.Label17)
+        Me.GroupBox2.Controls.Add(Me.txtSalario)
+        Me.GroupBox2.Controls.Add(Me.Label16)
         Me.GroupBox2.Controls.Add(Me.Label15)
         Me.GroupBox2.Controls.Add(Me.Label5)
         Me.GroupBox2.Controls.Add(Me.ComboTipoTelefone)
         Me.GroupBox2.Controls.Add(Me.Label14)
-        Me.GroupBox2.Controls.Add(Me.MaskedTextBox1)
+        Me.GroupBox2.Controls.Add(Me.MaskTelefone)
         Me.GroupBox2.Controls.Add(Me.Label13)
         Me.GroupBox2.Controls.Add(Me.Label6)
         Me.GroupBox2.Controls.Add(Me.Label4)
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Controls.Add(Me.Label2)
         Me.GroupBox2.Controls.Add(Me.Label1)
-        Me.GroupBox2.Controls.Add(Me.ComboSituação)
+        Me.GroupBox2.Controls.Add(Me.ComboSituacao)
         Me.GroupBox2.Controls.Add(Me.ComboSexo)
         Me.GroupBox2.Controls.Add(Me.MaskDataNasc)
         Me.GroupBox2.Controls.Add(Me.TxtNome)
@@ -244,19 +265,63 @@ Partial Class CadastroFuncionario
         Me.GroupBox2.TabIndex = 39
         Me.GroupBox2.TabStop = False
         '
-        'txtRg
+        'MaskRG
         '
-        Me.txtRg.Location = New System.Drawing.Point(90, 210)
-        Me.txtRg.Name = "txtRg"
-        Me.txtRg.Size = New System.Drawing.Size(100, 20)
-        Me.txtRg.TabIndex = 34
+        Me.MaskRG.Location = New System.Drawing.Point(94, 210)
+        Me.MaskRG.Mask = "AA-00000000"
+        Me.MaskRG.Name = "MaskRG"
+        Me.MaskRG.Size = New System.Drawing.Size(100, 20)
+        Me.MaskRG.TabIndex = 47
         '
-        'txtCpf
+        'MaskCPF
         '
-        Me.txtCpf.Location = New System.Drawing.Point(90, 177)
-        Me.txtCpf.Name = "txtCpf"
-        Me.txtCpf.Size = New System.Drawing.Size(100, 20)
-        Me.txtCpf.TabIndex = 33
+        Me.MaskCPF.Location = New System.Drawing.Point(94, 173)
+        Me.MaskCPF.Mask = "000.000.000-00"
+        Me.MaskCPF.Name = "MaskCPF"
+        Me.MaskCPF.Size = New System.Drawing.Size(100, 20)
+        Me.MaskCPF.TabIndex = 46
+        '
+        'ComboTipoFunc
+        '
+        Me.ComboTipoFunc.FormattingEnabled = True
+        Me.ComboTipoFunc.Location = New System.Drawing.Point(128, 360)
+        Me.ComboTipoFunc.Name = "ComboTipoFunc"
+        Me.ComboTipoFunc.Size = New System.Drawing.Size(121, 21)
+        Me.ComboTipoFunc.TabIndex = 45
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(282, 360)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(170, 22)
+        Me.Button1.TabIndex = 44
+        Me.Button1.Text = "Cadastrar tipo funcionario"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(18, 363)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(104, 13)
+        Me.Label17.TabIndex = 42
+        Me.Label17.Text = "Tipo do Funcionario:"
+        '
+        'txtSalario
+        '
+        Me.txtSalario.Location = New System.Drawing.Point(86, 320)
+        Me.txtSalario.Name = "txtSalario"
+        Me.txtSalario.Size = New System.Drawing.Size(100, 20)
+        Me.txtSalario.TabIndex = 41
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(15, 320)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(42, 13)
+        Me.Label16.TabIndex = 40
+        Me.Label16.Text = "Salario:"
         '
         'Label15
         '
@@ -293,13 +358,13 @@ Partial Class CadastroFuncionario
         Me.Label14.TabIndex = 29
         Me.Label14.Text = "Tipo de Telefone:"
         '
-        'MaskedTextBox1
+        'MaskTelefone
         '
-        Me.MaskedTextBox1.Location = New System.Drawing.Point(90, 274)
-        Me.MaskedTextBox1.Mask = "(99)0000-0000"
-        Me.MaskedTextBox1.Name = "MaskedTextBox1"
-        Me.MaskedTextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.MaskedTextBox1.TabIndex = 28
+        Me.MaskTelefone.Location = New System.Drawing.Point(90, 274)
+        Me.MaskTelefone.Mask = "(99)0000-0000"
+        Me.MaskTelefone.Name = "MaskTelefone"
+        Me.MaskTelefone.Size = New System.Drawing.Size(100, 20)
+        Me.MaskTelefone.TabIndex = 28
         '
         'Label13
         '
@@ -355,13 +420,13 @@ Partial Class CadastroFuncionario
         Me.Label1.TabIndex = 6
         Me.Label1.Text = "Matricula:"
         '
-        'ComboSituação
+        'ComboSituacao
         '
-        Me.ComboSituação.FormattingEnabled = True
-        Me.ComboSituação.Location = New System.Drawing.Point(90, 236)
-        Me.ComboSituação.Name = "ComboSituação"
-        Me.ComboSituação.Size = New System.Drawing.Size(121, 21)
-        Me.ComboSituação.TabIndex = 5
+        Me.ComboSituacao.FormattingEnabled = True
+        Me.ComboSituacao.Location = New System.Drawing.Point(94, 239)
+        Me.ComboSituacao.Name = "ComboSituacao"
+        Me.ComboSituacao.Size = New System.Drawing.Size(121, 21)
+        Me.ComboSituacao.TabIndex = 5
         '
         'ComboSexo
         '
@@ -398,7 +463,7 @@ Partial Class CadastroFuncionario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(714, 698)
+        Me.ClientSize = New System.Drawing.Size(621, 698)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "CadastroFuncionario"
@@ -430,20 +495,26 @@ Partial Class CadastroFuncionario
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents ComboTipoTelefone As System.Windows.Forms.ComboBox
     Friend WithEvents Label14 As System.Windows.Forms.Label
-    Friend WithEvents MaskedTextBox1 As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents MaskTelefone As System.Windows.Forms.MaskedTextBox
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents ComboSituação As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboSituacao As System.Windows.Forms.ComboBox
     Friend WithEvents ComboSexo As System.Windows.Forms.ComboBox
     Friend WithEvents MaskDataNasc As System.Windows.Forms.MaskedTextBox
     Friend WithEvents TxtNome As System.Windows.Forms.TextBox
     Friend WithEvents TxtMatricula As System.Windows.Forms.TextBox
-    Friend WithEvents txtRg As System.Windows.Forms.TextBox
-    Friend WithEvents txtCpf As System.Windows.Forms.TextBox
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents txtSalario As System.Windows.Forms.TextBox
+    Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents ComboTipoFunc As System.Windows.Forms.ComboBox
+    Friend WithEvents MaskRG As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents MaskCPF As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents BtnCad_Nov_Cid As System.Windows.Forms.Button
 End Class
