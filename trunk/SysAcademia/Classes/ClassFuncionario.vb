@@ -1,4 +1,6 @@
-﻿Public Class ClassFuncionario
+﻿'Classe Funcionario
+
+Public Class ClassFuncionario
 
 
     Private _Telefone As ClassTelefone
