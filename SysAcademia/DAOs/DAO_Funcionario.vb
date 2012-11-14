@@ -9,13 +9,13 @@ Public Class DAO_Funcionario
         Me.Conexao = Conexao
     End Sub
 
-    Public Function Insert(ByVal ObjFuncionario As ClassFuncionario)
+    Public Function Insert(ByVal ObjFuncionario As ClassFuncionario) As Integer
 
         Dim Comando As New SqlCommand
 
         Comando.Connection = Conexao
         Comando.CommandType = CommandType.Text
-        Comando.CommandText = "INSERT INTO Funcionario (Matricula_Funcionario,Nome,Data_Nasc,Sexo,Cpf,Rg,Salario) VALUES (@Matricula_Funcionario,@Nome,@Data_Nasc,@Sexo,@Cpf,@Rg,@Salario)"
+        Comando.CommandText = "INSERT INTO Funcionario (Matricula_Funcionario,Nome,Data_Nasc,Sexo,Cpf,Rg,Salario,Codigo_TipoFuncionario,Codigo_Status) VALUES (@Matricula_Funcionario,@Nome,@Data_Nasc,@Sexo,@Cpf,@Rg,@Salario,@Codigo_TipoFuncionario,@Codigo_Status)"
 
         Comando.Parameters.AddWithValue("@Matricula_Funcionario", ObjFuncionario.Matricula_Funcionario)
         Comando.Parameters.AddWithValue("@Nome", ObjFuncionario.Nome)
@@ -24,11 +24,11 @@ Public Class DAO_Funcionario
         Comando.Parameters.AddWithValue("@Cpf", BbUtil.GetNull(ObjFuncionario.Cpf))
         Comando.Parameters.AddWithValue("@Rg", BbUtil.GetNull(ObjFuncionario.Rg))
         Comando.Parameters.AddWithValue("@Salario", BbUtil.GetNull(ObjFuncionario.Salario))
+        Comando.Parameters.AddWithValue("@Codigo_TipoFuncionario", BbUtil.GetNull(ObjFuncionario.Codigo_TipoFuncionario.Codigo_TipoFuncionario))
+        Comando.Parameters.AddWithValue("@Codigo_Status", BbUtil.GetNull(ObjFuncionario.SituacaoFuncionario.Codigo_SituacaoFuncionario))
+        'Comando.Parameters.AddWithValue("@Codigo_Endereco", BbUtil.GetNull(ObjFuncionario.Codigo_Endereco.Codigo_Endereco))
 
-
-
-        Dim N As Integer = Comando.ExecuteNonQuery()
-        Return N
+        Return Comando.ExecuteNonQuery()
 
     End Function
 
