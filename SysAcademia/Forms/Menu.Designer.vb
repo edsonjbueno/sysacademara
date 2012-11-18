@@ -26,12 +26,13 @@ Partial Class Menu
         Me.ALUNOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CadastrarAlunoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FUNCIONÁRIOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CADASTRARFUNCIONARIOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MENSALIDADESToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FINANCEIROToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AVISOSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RELATÓRIOSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AJUDAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CADASTRARFUNCIONARIOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FUNCIONÁRIOToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -66,6 +67,12 @@ Partial Class Menu
         Me.FUNCIONÁRIOToolStripMenuItem.Size = New System.Drawing.Size(93, 20)
         Me.FUNCIONÁRIOToolStripMenuItem.Text = "FUNCIONÁRIO"
         '
+        'CADASTRARFUNCIONARIOToolStripMenuItem
+        '
+        Me.CADASTRARFUNCIONARIOToolStripMenuItem.Name = "CADASTRARFUNCIONARIOToolStripMenuItem"
+        Me.CADASTRARFUNCIONARIOToolStripMenuItem.Size = New System.Drawing.Size(217, 22)
+        Me.CADASTRARFUNCIONARIOToolStripMenuItem.Text = "CADASTRAR FUNCIONARIO"
+        '
         'MENSALIDADESToolStripMenuItem
         '
         Me.MENSALIDADESToolStripMenuItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -89,6 +96,7 @@ Partial Class Menu
         '
         'RELATÓRIOSToolStripMenuItem
         '
+        Me.RELATÓRIOSToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FUNCIONÁRIOToolStripMenuItem1})
         Me.RELATÓRIOSToolStripMenuItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RELATÓRIOSToolStripMenuItem.Name = "RELATÓRIOSToolStripMenuItem"
         Me.RELATÓRIOSToolStripMenuItem.Size = New System.Drawing.Size(88, 20)
@@ -101,11 +109,11 @@ Partial Class Menu
         Me.AJUDAToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
         Me.AJUDAToolStripMenuItem.Text = "AJUDA"
         '
-        'CADASTRARFUNCIONARIOToolStripMenuItem
+        'FUNCIONÁRIOToolStripMenuItem1
         '
-        Me.CADASTRARFUNCIONARIOToolStripMenuItem.Name = "CADASTRARFUNCIONARIOToolStripMenuItem"
-        Me.CADASTRARFUNCIONARIOToolStripMenuItem.Size = New System.Drawing.Size(217, 22)
-        Me.CADASTRARFUNCIONARIOToolStripMenuItem.Text = "CADASTRAR FUNCIONARIO"
+        Me.FUNCIONÁRIOToolStripMenuItem1.Name = "FUNCIONÁRIOToolStripMenuItem1"
+        Me.FUNCIONÁRIOToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.FUNCIONÁRIOToolStripMenuItem1.Text = "FUNCIONÁRIO"
         '
         'Menu
         '
@@ -116,6 +124,7 @@ Partial Class Menu
         Me.ClientSize = New System.Drawing.Size(715, 338)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Menu"
         Me.ShowIcon = False
@@ -137,5 +146,6 @@ Partial Class Menu
     Friend WithEvents AJUDAToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CadastrarAlunoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CADASTRARFUNCIONARIOToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents FUNCIONÁRIOToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
 
 End Class

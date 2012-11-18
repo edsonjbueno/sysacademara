@@ -24,8 +24,6 @@ Partial Class CadastroFuncionario
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.BtnCad_Nov_Cid = New System.Windows.Forms.Button()
-        Me.BtnCancelar = New System.Windows.Forms.Button()
-        Me.BtnSalvar = New System.Windows.Forms.Button()
         Me.ComboEstado = New System.Windows.Forms.ComboBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.ComboCidade = New System.Windows.Forms.ComboBox()
@@ -39,7 +37,8 @@ Partial Class CadastroFuncionario
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TxtRua = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.TxtEndereço = New System.Windows.Forms.TextBox()
+        Me.BtnCancelar = New System.Windows.Forms.Button()
+        Me.BtnSalvar = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.MaskRG = New System.Windows.Forms.MaskedTextBox()
         Me.MaskCPF = New System.Windows.Forms.MaskedTextBox()
@@ -71,8 +70,6 @@ Partial Class CadastroFuncionario
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.BtnCad_Nov_Cid)
-        Me.GroupBox1.Controls.Add(Me.BtnCancelar)
-        Me.GroupBox1.Controls.Add(Me.BtnSalvar)
         Me.GroupBox1.Controls.Add(Me.ComboEstado)
         Me.GroupBox1.Controls.Add(Me.Label12)
         Me.GroupBox1.Controls.Add(Me.ComboCidade)
@@ -86,8 +83,7 @@ Partial Class CadastroFuncionario
         Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Controls.Add(Me.TxtRua)
         Me.GroupBox1.Controls.Add(Me.Label7)
-        Me.GroupBox1.Controls.Add(Me.TxtEndereço)
-        Me.GroupBox1.Location = New System.Drawing.Point(13, 443)
+        Me.GroupBox1.Location = New System.Drawing.Point(599, 68)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(560, 227)
         Me.GroupBox1.TabIndex = 38
@@ -101,24 +97,6 @@ Partial Class CadastroFuncionario
         Me.BtnCad_Nov_Cid.TabIndex = 73
         Me.BtnCad_Nov_Cid.Text = "Cadastrar Nova Cidade ?"
         Me.BtnCad_Nov_Cid.UseVisualStyleBackColor = True
-        '
-        'BtnCancelar
-        '
-        Me.BtnCancelar.Location = New System.Drawing.Point(289, 176)
-        Me.BtnCancelar.Name = "BtnCancelar"
-        Me.BtnCancelar.Size = New System.Drawing.Size(193, 28)
-        Me.BtnCancelar.TabIndex = 32
-        Me.BtnCancelar.Text = "CANCELAR"
-        Me.BtnCancelar.UseVisualStyleBackColor = True
-        '
-        'BtnSalvar
-        '
-        Me.BtnSalvar.Location = New System.Drawing.Point(90, 176)
-        Me.BtnSalvar.Name = "BtnSalvar"
-        Me.BtnSalvar.Size = New System.Drawing.Size(193, 28)
-        Me.BtnSalvar.TabIndex = 31
-        Me.BtnSalvar.Text = "SALVAR"
-        Me.BtnSalvar.UseVisualStyleBackColor = True
         '
         'ComboEstado
         '
@@ -227,12 +205,23 @@ Partial Class CadastroFuncionario
         Me.Label7.TabIndex = 13
         Me.Label7.Text = "Endereço:"
         '
-        'TxtEndereço
+        'BtnCancelar
         '
-        Me.TxtEndereço.Location = New System.Drawing.Point(94, 14)
-        Me.TxtEndereço.Name = "TxtEndereço"
-        Me.TxtEndereço.Size = New System.Drawing.Size(374, 20)
-        Me.TxtEndereço.TabIndex = 12
+        Me.BtnCancelar.Location = New System.Drawing.Point(230, 512)
+        Me.BtnCancelar.Name = "BtnCancelar"
+        Me.BtnCancelar.Size = New System.Drawing.Size(193, 28)
+        Me.BtnCancelar.TabIndex = 32
+        Me.BtnCancelar.Text = "CANCELAR"
+        Me.BtnCancelar.UseVisualStyleBackColor = True
+        '
+        'BtnSalvar
+        '
+        Me.BtnSalvar.Location = New System.Drawing.Point(21, 512)
+        Me.BtnSalvar.Name = "BtnSalvar"
+        Me.BtnSalvar.Size = New System.Drawing.Size(193, 28)
+        Me.BtnSalvar.TabIndex = 31
+        Me.BtnSalvar.Text = "SALVAR"
+        Me.BtnSalvar.UseVisualStyleBackColor = True
         '
         'GroupBox2
         '
@@ -259,7 +248,7 @@ Partial Class CadastroFuncionario
         Me.GroupBox2.Controls.Add(Me.MaskDataNasc)
         Me.GroupBox2.Controls.Add(Me.TxtNome)
         Me.GroupBox2.Controls.Add(Me.TxtMatricula)
-        Me.GroupBox2.Location = New System.Drawing.Point(13, 16)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 65)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(559, 421)
         Me.GroupBox2.TabIndex = 39
@@ -463,9 +452,11 @@ Partial Class CadastroFuncionario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(621, 698)
+        Me.ClientSize = New System.Drawing.Size(1171, 642)
         Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.BtnCancelar)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.BtnSalvar)
         Me.Name = "CadastroFuncionario"
         Me.Text = "CadastroFuncionario"
         Me.GroupBox1.ResumeLayout(False)
@@ -491,7 +482,6 @@ Partial Class CadastroFuncionario
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents TxtRua As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents TxtEndereço As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents ComboTipoTelefone As System.Windows.Forms.ComboBox
     Friend WithEvents Label14 As System.Windows.Forms.Label

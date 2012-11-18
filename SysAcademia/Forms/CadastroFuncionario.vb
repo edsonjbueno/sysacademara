@@ -5,26 +5,58 @@ Public Class CadastroFuncionario
     Private Sub BtnSalvar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnSalvar.Click
 
         Dim Conexao As SqlConnection = Nothing
-
+        Dim Transacao As SqlTransaction = Nothing
 
         Try
             Conexao = FabricadeConexao.GetConexao()
+            Transacao = Conexao.BeginTransaction()
+            'Chama DaoEndereco
+            Dim DaoEnd As New DAO_Endereco(Conexao, Transacao)
+            Dim ObjEnd As ClassEndereco = GetDadosEndereco()
+            Dim I As Integer = DaoEnd.Insert(ObjEnd)
 
+            'Chama GetDados Funcionario
             Dim ObjFuncionario As ClassFuncionario = GetDadosFuncionario()
-            Dim Dao As New DAO_Funcionario(Conexao)
 
+            ObjFuncionario.Codigo_Endereco.Codigo_Endereco = ObjEnd.Codigo_Endereco
+
+            Dim Dao As New DAO_Funcionario(Conexao, Transacao)
             Dim N As Integer = Dao.Insert(ObjFuncionario)
 
+            Transacao.Commit()
             MessageBox.Show("OK! " & N)
 
         Catch ex As Exception
+
+            If Transacao IsNot Nothing Then
+                Transacao.Rollback()
+            End If
+
             MessageBox.Show("Erro ao acessar o banco de dados." & ex.Message)
         End Try
         FabricadeConexao.FechaConexao(Conexao)
 
     End Sub
 
+
+    Private Function GetDadosEndereco() As ClassEndereco
+
+        Dim ObjEnd As New ClassEndereco
+
+        ObjEnd.Bairro = TxtBairro.Text
+        ObjEnd.Complemento = TxtComplemento.Text
+        ObjEnd.Numero = TxtNº.Text
+        ObjEnd.Rua = TxtRua.Text
+        ObjEnd.Busca_Cidade_Estado.Estado.Codigo_Estado = ComboEstado.SelectedValue
+        ObjEnd.Busca_Cidade_Estado.Codigo_Cidade = ComboCidade.SelectedValue
+
+        Return ObjEnd
+
+    End Function
+
     Private Function GetDadosFuncionario() As ClassFuncionario
+
+        GetDadosEndereco()
 
         Dim ObjFuncionario As New ClassFuncionario
 
@@ -40,9 +72,7 @@ Public Class CadastroFuncionario
         'ObjFuncionario.Telefone.Tipo = ComboTipoTelefone.SelectedItem
         ObjFuncionario.Codigo_TipoFuncionario.Codigo_TipoFuncionario = ComboTipoFunc.SelectedValue
 
-        'Endereco
-        'ObjFuncionario.Codigo_Endereco.Busca_Cidade_Estado.Estado.Nome = ComboEstado.SelectedItem
-        'ObjFuncionario.Codigo_Endereco.Busca_Cidade_Estado.Nome = ComboCidade.SelectedItem
+
 
         Return ObjFuncionario
 
@@ -153,7 +183,7 @@ Public Class CadastroFuncionario
         PopulaCidades()
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+    Private Sub BtnCadTipoFunc_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         CadTipFunc.Show()
     End Sub
 
