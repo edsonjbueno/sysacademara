@@ -3,23 +3,40 @@
 Public Class DAO_Endereco
 
     Private Conexao As SqlConnection
+    Private Transacao As SqlTransaction
 
-    Private Sub New(ByVal conexao As SqlConnection)
+    Public Sub New(ByVal conexao As SqlConnection)
         Me.Conexao = conexao
     End Sub
+
+    Public Sub New(ByVal conexao As SqlConnection, ByVal Transacao As SqlTransaction)
+        Me.Conexao = conexao
+        Me.Transacao = Transacao
+    End Sub
+
     Public Function Insert(ByVal Obj_Endereco As ClassEndereco) As Integer
 
         Dim Comando As New SqlCommand
         Comando.Connection = Conexao
         Comando.CommandType = CommandType.Text
-        Comando.CommandText = "insert into Endereco (Rua,Numero,Complemento,Bairro) values (@Rua,@Numero,@Complemento,@Bairro)"
+
+        If Transacao IsNot Nothing Then
+            Comando.Transaction = Transacao
+        End If
+
+        Comando.CommandText = "insert into Endereco (Rua,Numero,Complemento,Bairro,Codigo_Cidade) values (@Rua,@Numero,@Complemento,@Bairro,@Codigo_Cidade) SELECT SCOPE_IDENTITY()"
 
         Comando.Parameters.AddWithValue("@Rua", Obj_Endereco.Rua)
         Comando.Parameters.AddWithValue("@Numero", Obj_Endereco.Numero)
-        Comando.Parameters.AddWithValue("@Complemento", Obj_Endereco.Complemento)
+        Comando.Parameters.AddWithValue("@Complemento", BbUtil.GetNull(Obj_Endereco.Complemento))
         Comando.Parameters.AddWithValue("@Bairro", Obj_Endereco.Bairro)
+        Comando.Parameters.AddWithValue("@Codigo_Cidade", Obj_Endereco.Busca_Cidade_Estado.Codigo_Cidade)
 
-        Return Comando.ExecuteNonQuery
+        Dim N As Integer = Comando.ExecuteScalar()
+
+        Obj_Endereco.Codigo_Endereco = N
+
+        Return N
 
     End Function
 
@@ -31,6 +48,11 @@ Public Class DAO_Endereco
         Dim Comando As New SqlCommand
         Comando.Connection = Conexao
         Comando.CommandType = CommandType.Text
+
+        If Transacao IsNot Nothing Then
+            Comando.Transaction = Transacao
+        End If
+
         Comando.CommandText = "select * from Endereco"
 
         Dim Reader As SqlDataReader = Comando.ExecuteReader

@@ -51,7 +51,7 @@
         End Set
     End Property
 
-    Private _Busca_Cidade_Estado As ClassCidade
+    Private _Busca_Cidade_Estado As New ClassCidade
     Public Property Busca_Cidade_Estado() As ClassCidade
         Get
             Return _Busca_Cidade_Estado

@@ -110,18 +110,6 @@ Public Class ClassFuncionario
     End Property
 
 
-    Private _Codigo_Cidade As New ClassCidade
-    Public Property Codigo_Cidade() As ClassCidade
-        Get
-            Return _Codigo_Cidade
-        End Get
-        Set(ByVal value As ClassCidade)
-            _Codigo_Cidade = value
-        End Set
-    End Property
-
-
-
     Private _Codigo_TipoFuncionario As New ClassTipoFunc
     Public Property Codigo_TipoFuncionario() As ClassTipoFunc
         Get
