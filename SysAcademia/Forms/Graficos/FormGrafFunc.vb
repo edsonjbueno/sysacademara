@@ -1,11 +1,9 @@
 ﻿Imports System.Data.SqlClient
 
-Public Class Relatorio_Func
+Public Class FormGrafFunc
 
-    Private Sub Relatorio_Func_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
-        MostraDados()
-
+    Private Sub FormGrafFunc_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        MostraDados
     End Sub
 
     Private Sub MostraDados()
@@ -16,9 +14,9 @@ Public Class Relatorio_Func
         Try
             Conexao = FabricadeConexao.GetConexao
 
-            Dim DAO As New DAO_Funcionario(Conexao)
+            Dim DAO As New DAO_SexoGrafFun(Conexao)
 
-            ClassFuncionarioBindingSource.DataSource = DAO.ListAll
+            ClassSexoGraFunBindingSource.DataSource = DAO.ListAll
             Me.ReportViewer1.RefreshReport()
 
         Catch ex As Exception
@@ -29,10 +27,6 @@ Public Class Relatorio_Func
 
         End Try
 
-     
     End Sub
-
-
-
 
 End Class

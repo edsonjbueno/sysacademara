@@ -28,7 +28,7 @@ Public Class DAO_Endereco
 
         Comando.Parameters.AddWithValue("@Rua", Obj_Endereco.Rua)
         Comando.Parameters.AddWithValue("@Numero", Obj_Endereco.Numero)
-        Comando.Parameters.AddWithValue("@Complemento", BbUtil.GetNull(Obj_Endereco.Complemento))
+        Comando.Parameters.AddWithValue("@Complemento", BdUtil.GetNull(Obj_Endereco.Complemento))
         Comando.Parameters.AddWithValue("@Bairro", Obj_Endereco.Bairro)
         Comando.Parameters.AddWithValue("@Codigo_Cidade", Obj_Endereco.Busca_Cidade_Estado.Codigo_Cidade)
 

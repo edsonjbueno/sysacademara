@@ -3,7 +3,7 @@
 Public Class ClassFuncionario
 
 
-    Private _Telefone As ClassTelefone
+    Private _Telefone As New ClassTelefone
     Public Property Telefone() As ClassTelefone
         Get
             Return _Telefone
