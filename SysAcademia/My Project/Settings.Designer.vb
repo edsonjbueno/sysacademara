@@ -58,10 +58,22 @@ Namespace My
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
          Global.System.Configuration.DefaultSettingValueAttribute("Data Source=.\SQLEXPRESS;AttachDbFilename=""|DataDirectory|bd_sysacademia.mdf"";Int"& _ 
-            "egrated Security=True;Connect Timeout=30;User Instance=True")>  _
+            "egrated Security=True;Connect Timeout=30;User Instance=True;MultipleActiveResult"& _ 
+            "Sets=True")>  _
         Public ReadOnly Property StringDeConexao() As String
             Get
                 Return CType(Me("StringDeConexao"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\bin\Debug\bd_sysacademi"& _ 
+            "a.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True")>  _
+        Public ReadOnly Property bd_sysacademiaConnectionString() As String
+            Get
+                Return CType(Me("bd_sysacademiaConnectionString"),String)
             End Get
         End Property
     End Class
