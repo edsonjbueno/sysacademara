@@ -31,14 +31,14 @@ Public Class DAO_Funcionario
 
         Comando.Parameters.AddWithValue("@Matricula_Funcionario", ObjFuncionario.Matricula_Funcionario)
         Comando.Parameters.AddWithValue("@Nome", ObjFuncionario.Nome)
-        Comando.Parameters.AddWithValue("@Data_Nasc", BbUtil.GetNull(ObjFuncionario.Data_Nasc))
-        Comando.Parameters.AddWithValue("@Sexo", BbUtil.GetNull(ObjFuncionario.Sexo))
-        Comando.Parameters.AddWithValue("@Cpf", BbUtil.GetNull(ObjFuncionario.Cpf))
-        Comando.Parameters.AddWithValue("@Rg", BbUtil.GetNull(ObjFuncionario.Rg))
-        Comando.Parameters.AddWithValue("@Salario", BbUtil.GetNull(ObjFuncionario.Salario))
-        Comando.Parameters.AddWithValue("@Codigo_TipoFuncionario", BbUtil.GetNull(ObjFuncionario.Codigo_TipoFuncionario.Codigo_TipoFuncionario))
-        Comando.Parameters.AddWithValue("@Codigo_Status", BbUtil.GetNull(ObjFuncionario.SituacaoFuncionario.Codigo_SituacaoFuncionario))
-        Comando.Parameters.AddWithValue("@Codigo_Endereco", BbUtil.GetNull(ObjFuncionario.Codigo_Endereco.Codigo_Endereco))
+        Comando.Parameters.AddWithValue("@Data_Nasc", BdUtil.GetNull(ObjFuncionario.Data_Nasc))
+        Comando.Parameters.AddWithValue("@Sexo", BdUtil.GetNull(ObjFuncionario.Sexo))
+        Comando.Parameters.AddWithValue("@Cpf", BdUtil.GetNull(ObjFuncionario.Cpf))
+        Comando.Parameters.AddWithValue("@Rg", BdUtil.GetNull(ObjFuncionario.Rg))
+        Comando.Parameters.AddWithValue("@Salario", BdUtil.GetNull(ObjFuncionario.Salario))
+        Comando.Parameters.AddWithValue("@Codigo_TipoFuncionario", BdUtil.GetNull(ObjFuncionario.Codigo_TipoFuncionario.Codigo_TipoFuncionario))
+        Comando.Parameters.AddWithValue("@Codigo_Status", BdUtil.GetNull(ObjFuncionario.SituacaoFuncionario.Codigo_SituacaoFuncionario))
+        Comando.Parameters.AddWithValue("@Codigo_Endereco", BdUtil.GetNull(ObjFuncionario.Codigo_Endereco.Codigo_Endereco))
 
         Return Comando.ExecuteNonQuery()
 
@@ -52,17 +52,20 @@ Public Class DAO_Funcionario
 
         Comando.Connection = Conexao
         Comando.CommandType = CommandType.Text
-        Comando.CommandText = "SELECT Nome, Salario,Telefone FROM Funcionario"
+        Comando.CommandText = "select * from Funcionario order by Matricula_Funcionario"
 
         Dim Cursor As SqlDataReader = Comando.ExecuteReader()
 
 
         While Cursor.Read()
             Dim ObjFuncionario As New ClassFuncionario()
-            ObjFuncionario.Salario = Cursor("Salario")
+            ObjFuncionario.Matricula_Funcionario = Cursor("Matricula_Funcionario")
             ObjFuncionario.Nome = Cursor("Nome")
-            ObjFuncionario.Telefone = Cursor("Data_Nasc")
-            ObjFuncionario.SituacaoFuncionario = Cursor("SituacaoFuncionario")
+            ObjFuncionario.Sexo = BdUtil.SetNull(Cursor("Sexo"))
+            ObjFuncionario.Salario = BdUtil.SetNull(Cursor("Salario"))
+            ObjFuncionario.Rg = BdUtil.SetNull(Cursor("Rg"))
+            ObjFuncionario.Data_Nasc = BdUtil.SetNull(Cursor("Data_Nasc"))
+            ObjFuncionario.Cpf = BdUtil.SetNull(Cursor("Cpf"))
 
             Funcionarios.Add(ObjFuncionario)
 

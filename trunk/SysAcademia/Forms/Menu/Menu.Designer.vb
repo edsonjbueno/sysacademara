@@ -30,18 +30,22 @@ Partial Class Menu
         Me.MENSALIDADESToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FINANCEIROToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AVISOSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ConsultasToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CONSULTAFUNCIONÁRIOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RELATÓRIOSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AJUDAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FUNCIONÁRIOToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AJUDAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FUNCIONÁRIOSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ALUNOToolStripMenuItem, Me.FUNCIONÁRIOToolStripMenuItem, Me.MENSALIDADESToolStripMenuItem, Me.FINANCEIROToolStripMenuItem, Me.AVISOSToolStripMenuItem, Me.RELATÓRIOSToolStripMenuItem, Me.AJUDAToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ALUNOToolStripMenuItem, Me.FUNCIONÁRIOToolStripMenuItem, Me.MENSALIDADESToolStripMenuItem, Me.FINANCEIROToolStripMenuItem, Me.AVISOSToolStripMenuItem, Me.ConsultasToolStripMenuItem1, Me.RELATÓRIOSToolStripMenuItem, Me.ToolStripMenuItem1, Me.AJUDAToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(715, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(859, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -94,6 +98,19 @@ Partial Class Menu
         Me.AVISOSToolStripMenuItem.Size = New System.Drawing.Size(58, 20)
         Me.AVISOSToolStripMenuItem.Text = "AVISOS"
         '
+        'ConsultasToolStripMenuItem1
+        '
+        Me.ConsultasToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CONSULTAFUNCIONÁRIOToolStripMenuItem})
+        Me.ConsultasToolStripMenuItem1.Name = "ConsultasToolStripMenuItem1"
+        Me.ConsultasToolStripMenuItem1.Size = New System.Drawing.Size(86, 20)
+        Me.ConsultasToolStripMenuItem1.Text = "CONSULTAS"
+        '
+        'CONSULTAFUNCIONÁRIOToolStripMenuItem
+        '
+        Me.CONSULTAFUNCIONÁRIOToolStripMenuItem.Name = "CONSULTAFUNCIONÁRIOToolStripMenuItem"
+        Me.CONSULTAFUNCIONÁRIOToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
+        Me.CONSULTAFUNCIONÁRIOToolStripMenuItem.Text = "FUNCIONÁRIOS"
+        '
         'RELATÓRIOSToolStripMenuItem
         '
         Me.RELATÓRIOSToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FUNCIONÁRIOToolStripMenuItem1})
@@ -102,6 +119,12 @@ Partial Class Menu
         Me.RELATÓRIOSToolStripMenuItem.Size = New System.Drawing.Size(88, 20)
         Me.RELATÓRIOSToolStripMenuItem.Text = "RELATÓRIOS"
         '
+        'FUNCIONÁRIOToolStripMenuItem1
+        '
+        Me.FUNCIONÁRIOToolStripMenuItem1.Name = "FUNCIONÁRIOToolStripMenuItem1"
+        Me.FUNCIONÁRIOToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.FUNCIONÁRIOToolStripMenuItem1.Text = "FUNCIONÁRIO"
+        '
         'AJUDAToolStripMenuItem
         '
         Me.AJUDAToolStripMenuItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -109,11 +132,18 @@ Partial Class Menu
         Me.AJUDAToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
         Me.AJUDAToolStripMenuItem.Text = "AJUDA"
         '
-        'FUNCIONÁRIOToolStripMenuItem1
+        'ToolStripMenuItem1
         '
-        Me.FUNCIONÁRIOToolStripMenuItem1.Name = "FUNCIONÁRIOToolStripMenuItem1"
-        Me.FUNCIONÁRIOToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
-        Me.FUNCIONÁRIOToolStripMenuItem1.Text = "FUNCIONÁRIO"
+        Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FUNCIONÁRIOSToolStripMenuItem})
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(74, 20)
+        Me.ToolStripMenuItem1.Text = "GRÁFICOS"
+        '
+        'FUNCIONÁRIOSToolStripMenuItem
+        '
+        Me.FUNCIONÁRIOSToolStripMenuItem.Name = "FUNCIONÁRIOSToolStripMenuItem"
+        Me.FUNCIONÁRIOSToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
+        Me.FUNCIONÁRIOSToolStripMenuItem.Text = "FUNCIONÁRIOS"
         '
         'Menu
         '
@@ -121,7 +151,7 @@ Partial Class Menu
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Gray
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(715, 338)
+        Me.ClientSize = New System.Drawing.Size(859, 338)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.IsMdiContainer = True
@@ -147,5 +177,9 @@ Partial Class Menu
     Friend WithEvents CadastrarAlunoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CADASTRARFUNCIONARIOToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents FUNCIONÁRIOToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ConsultasToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents CONSULTAFUNCIONÁRIOToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents FUNCIONÁRIOSToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

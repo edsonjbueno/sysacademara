@@ -10,6 +10,7 @@ Public Class CadastroFuncionario
         Try
             Conexao = FabricadeConexao.GetConexao()
             Transacao = Conexao.BeginTransaction()
+
             'Chama DaoEndereco
             Dim DaoEnd As New DAO_Endereco(Conexao, Transacao)
             Dim ObjEnd As ClassEndereco = GetDadosEndereco()
@@ -67,9 +68,15 @@ Public Class CadastroFuncionario
         ObjFuncionario.Rg = MaskRG.Text
         ObjFuncionario.Salario = txtSalario.Text
         ObjFuncionario.Sexo = ComboSexo.SelectedItem.ToString()
+
+        'Situacao
         ObjFuncionario.SituacaoFuncionario.Codigo_SituacaoFuncionario = ComboSituacao.SelectedValue
-        'ObjFuncionario.Telefone.Numero = MaskedTelefone.Text
-        'ObjFuncionario.Telefone.Tipo = ComboTipoTelefone.SelectedItem
+
+        'Telefone
+        ObjFuncionario.Telefone.Numero = MaskTelefone.Text
+        ObjFuncionario.Telefone.Tipo_Telefone = ComboTipoTelefone.SelectedValue
+
+        'Tipo do Funcionario
         ObjFuncionario.Codigo_TipoFuncionario.Codigo_TipoFuncionario = ComboTipoFunc.SelectedValue
 
 
@@ -181,7 +188,15 @@ Public Class CadastroFuncionario
         Popula_ComboTipoFunc()
         PopulaEstado()
         PopulaCidades()
+        Popula_ComboTipoTelefone()
     End Sub
+
+    Private Sub Popula_ComboTipoTelefone()
+
+        ComboTipoTelefone.DataSource = GetType(ClassTipoTelefone).GetEnumValues
+
+    End Sub
+
 
     Private Sub BtnCadTipoFunc_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         CadTipFunc.Show()

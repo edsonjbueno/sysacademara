@@ -10,7 +10,7 @@ Public Class CadastroAluno
         ObjAluno.Data_Nasc = MaskDataNasc.Text
         ObjAluno.Sexo = ComboSexo.SelectedItem
         ObjAluno.Telefone.Numero = MaskTelefone.Text
-        ObjAluno.Telefone.Tipo = ComboTipoTelefone.SelectedItem
+        ObjAluno.Telefone.Tipo_Telefone = ComboTipoTelefone.SelectedItem
         ObjAluno.Endereco.Rua = TxtRua.Text
         ObjAluno.Endereco.Numero = TxtNº.Text
         ObjAluno.Endereco.Bairro = TxtBairro.Text

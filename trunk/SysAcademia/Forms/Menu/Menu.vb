@@ -17,4 +17,14 @@ Public Class Menu
         Relatorio_Func.MdiParent = Me
         Relatorio_Func.Show()
     End Sub
+
+    Private Sub CONSULTAFUNCIONÁRIOToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CONSULTAFUNCIONÁRIOToolStripMenuItem.Click
+        Consu_Func.MdiParent = Me
+        Consu_Func.Show()
+    End Sub
+
+    Private Sub FUNCIONÁRIOSToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FUNCIONÁRIOSToolStripMenuItem.Click
+        FormGrafFunc.MdiParent = Me
+        FormGrafFunc.Show()
+    End Sub
 End Class
