@@ -60,4 +60,9 @@
             _Busca_Cidade_Estado = value
         End Set
     End Property
+
+    Public Overrides Function ToString() As String
+        Return "R: " & Rua.Trim & "   ||   " & " Nº: " & Numero & "   ||   " & " Bairro: " & Bairro.Trim & "   ||   " & " Cidade: " & Busca_Cidade_Estado.Nome
+
+    End Function
 End Class
