@@ -48,6 +48,9 @@ Public Class DAO_Endereco
         Dim Comando As New SqlCommand
         Comando.Connection = Conexao
         Comando.CommandType = CommandType.Text
+        If Transacao IsNot Nothing Then
+            Comando.Transaction = Transacao
+        End If
 
         If Transacao IsNot Nothing Then
             Comando.Transaction = Transacao
@@ -81,6 +84,53 @@ Public Class DAO_Endereco
         Return Enderecos
 
     End Function
+
+    Public Function GetById(ByVal codigo As Integer) As ClassEndereco
+
+
+        Dim Comando As New SqlCommand
+        Comando.Connection = Conexao
+        Comando.CommandType = CommandType.Text
+        If Transacao IsNot Nothing Then
+            Comando.Transaction = Transacao
+        End If
+        Comando.CommandText = ("select * from Endereco where Codigo_Endereco = @Codigo_Endereco")
+        Comando.Parameters.AddWithValue("@Codigo_Endereco", codigo)
+
+
+        Dim Obj_Endereco As ClassEndereco = Nothing
+        Dim Cursor As SqlDataReader = Comando.ExecuteReader
+        Dim Dao_Cidade As New DAO_Cidade(Conexao, Transacao)
+
+
+        If Cursor.Read Then
+
+            Obj_Endereco = New ClassEndereco
+            Obj_Endereco.Codigo_Endereco = Cursor("Codigo_Endereco")
+            Obj_Endereco.Rua = Cursor("Rua")
+            Obj_Endereco.Numero = Cursor("Numero")
+            Obj_Endereco.Complemento = Cursor("Complemento")
+            Obj_Endereco.Bairro = Cursor("Bairro")
+            'Obj_Endereco.Busca_Cidade_Estado.Codigo_Cidade = Cursor("Codigo_Cidade")
+            Obj_Endereco.Busca_Cidade_Estado = Dao_Cidade.GetById(Cursor("Codigo_Cidade"))
+
+
+
+        End If
+
+        If Cursor IsNot Nothing AndAlso Not Cursor.IsClosed Then
+
+            Cursor.Close()
+
+        End If
+
+        Return Obj_Endereco
+
+
+    End Function
 End Class
+
+
+
 
 
