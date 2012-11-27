@@ -37,4 +37,7 @@
         End Set
     End Property
 
+    Public Overrides Function ToString() As String
+        Return Nome
+    End Function
 End Class
