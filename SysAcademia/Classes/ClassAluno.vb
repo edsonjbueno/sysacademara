@@ -23,11 +23,11 @@
     End Property
 
     Private _Data_Nasc As Date?
-    Public Property Data_Nasc() As Date
+    Public Property Data_Nasc() As Date?
         Get
             Return _Data_Nasc
         End Get
-        Set(ByVal value As Date)
+        Set(ByVal value As Date?)
             _Data_Nasc = value
         End Set
     End Property
@@ -42,7 +42,7 @@
         End Set
     End Property
 
-    Private _Mensalidade As ClassMensalidade
+    Private _Mensalidade As New ClassMensalidade
     Public Property Mensalidade() As ClassMensalidade
         Get
             Return _Mensalidade
@@ -52,28 +52,30 @@
         End Set
     End Property
 
-    Private _Situacao_Aluno As ClassSituacaoAluno
-    Public Property Situacao_Aluno() As ClassSituacaoAluno
+    Private _Situacao_Aluno As New ClassSituacao_Aluno
+    Public Property Situacao_Aluno() As ClassSituacao_Aluno
         Get
             Return _Situacao_Aluno
         End Get
-        Set(ByVal value As ClassSituacaoAluno)
+        Set(ByVal value As ClassSituacao_Aluno)
             _Situacao_Aluno = value
         End Set
     End Property
 
-    Private _Telefone As ClassTelefone
-    Public Property Telefone() As ClassTelefone
+
+    Private _Lista_Telefone As New List(Of ClassTelefone)
+    Public Property Lista_Telefone() As List(Of ClassTelefone)
         Get
-            Return _Telefone
+            Return _Lista_Telefone
         End Get
-        Set(ByVal value As ClassTelefone)
-            _Telefone = value
+        Set(ByVal value As List(Of ClassTelefone))
+            _Lista_Telefone = value
         End Set
     End Property
 
 
-    Private _Endereco As ClassEndereco
+
+    Private _Endereco As New ClassEndereco
     Public Property Endereco() As ClassEndereco
         Get
             Return _Endereco
@@ -83,23 +85,5 @@
         End Set
     End Property
 
-
-    Private _Codigo_Cidade As ClassCidade
-    Public Property Codigo_Cidade() As ClassCidade
-        Get
-            Return _Codigo_Cidade
-        End Get
-        Set(ByVal value As ClassCidade)
-            _Codigo_Cidade = value
-        End Set
-    End Property
-
-
-
-    'Public Overrides Function ToString() As String
-    '    Return "Matric.Aluno " & Matricula_Aluno & " Nome " & Nome & " Data.Nasc " & Data_Nasc & " Sexo " & Sexo &
-    '        " Mensalidade " & Mensalidade.ToString & " Situação " & Situacao_Aluno.ToString & " Telefone " & Telefone.ToString &
-    '        " Endereço " & Endereco.ToString
-    'End Function
 
 End Class
