@@ -1,6 +1,5 @@
 ﻿Public Class ClassTelefone
 
-
     Private _Codigo_Telefone As Integer
     Public Property Codigo_Telefone() As Integer
         Get
@@ -33,6 +32,7 @@
         End Set
     End Property
 
+
     Private _Matricula_Aluno As Integer
     Public Property Matricula_Aluno() As Integer
         Get
@@ -40,17 +40,6 @@
         End Get
         Set(ByVal value As Integer)
             _Matricula_Aluno = value
-        End Set
-    End Property
-
-
-    Private _Matricula_Funcionario As Integer
-    Public Property Matricula_Funcionario() As Integer
-        Get
-            Return _Matricula_Funcionario
-        End Get
-        Set(ByVal value As Integer)
-            _Matricula_Funcionario = value
         End Set
     End Property
 
