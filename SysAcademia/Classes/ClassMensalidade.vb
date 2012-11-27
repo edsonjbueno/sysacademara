@@ -11,13 +11,13 @@
         End Set
     End Property
 
-    Private _Data_Pagamento As Date
-    Public Property Data_Pagamento() As Date
+    Private _Data_Vencimento As Date?
+    Public Property Data_Vencimento() As Date?
         Get
-            Return _Data_Pagamento
+            Return _Data_Vencimento
         End Get
-        Set(ByVal value As Date)
-            _Data_Pagamento = value
+        Set(ByVal value As Date?)
+            _Data_Vencimento = value
         End Set
     End Property
 
@@ -30,5 +30,20 @@
             _Valor = value
         End Set
     End Property
+
+
+    Private _BuscaTipo As New ClassTipo_Mensalidade
+    Public Property BuscaTipo() As ClassTipo_Mensalidade
+        Get
+            Return _BuscaTipo
+        End Get
+        Set(ByVal value As ClassTipo_Mensalidade)
+            _BuscaTipo = value
+        End Set
+    End Property
+
+    Public Overrides Function ToString() As String
+        Return Valor
+    End Function
 
 End Class
